@@ -25,38 +25,21 @@ pinecone-client, flask
 
 dotenv, pypdf, bootstrap
 
-📁 Folder Structure
-bash
-Copy
-Edit
-medical_chatbot/
-├── app.py                 # Flask backend
-├── chatbot.ipynb          # Main notebook for development
-├── retriever_setup.py     # Document loader + vector store setup
-├── chat.html              # Frontend UI
-├── .env                   # API keys
-├── requirements.txt       # Python dependencies
-└── README.md              # You're here
 ⚙️ Setup Instructions
 1. Clone the repo & setup Python 3.10 environment
-bash
-Copy
-Edit
+   
 git clone <repo_url>
 cd medical_chatbot
 python3.10 -m venv env
 source env/bin/activate  # Or `env\Scripts\activate` on Windows
+
+
 2. Install dependencies
-bash
-Copy
-Edit
-pip install --upgrade pip
+
 pip install -r requirements.txt
 Make sure to use these compatible versions:
 
-text
-Copy
-Edit
+
 sentence-transformers==2.2.2
 huggingface-hub==0.14.1
 transformers==4.29.2
@@ -73,11 +56,9 @@ python-dotenv==1.0.1
 🔐 Set up .env file
 Create a .env file in your root directory:
 
-env
-Copy
-Edit
 GEMINI_API_KEY=your_gemini_api_key
 PINECONE_API_KEY=your_pinecone_api_key
+
 💡 How it Works
 You upload or load medical documents into Pinecone vector store.
 
@@ -88,9 +69,6 @@ Gemini 2.0 Flash answers the question using the retrieved context.
 The frontend sends input to the Flask API and shows the output.
 
 🧪 Run Locally
-bash
-Copy
-Edit
 python app.py
 Then open chat.html in your browser to start chatting.
 
